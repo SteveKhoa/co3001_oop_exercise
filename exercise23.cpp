@@ -107,9 +107,9 @@ class Course
 
 public:
     void addStudent(Student student_id) { studentList.push_back(Student(student_id)); };
-    void removeStudent(Student student_id){};
-    void addStaff(Staff staff_id){};
-    void removeStaff(Staff staff_id){};
+    void removeStudent(Student student_id) {studentList = rm_by_idx(studentList, student_id);};
+    void addStaff(Staff staff_id){ staffList.push_back(Staff(staff_id)); };
+    void removeStaff(Staff staff_id) {staffList = rm_by_idx(staffList, staff_id);};
     std::string toString() { return ""; }
 };
 
